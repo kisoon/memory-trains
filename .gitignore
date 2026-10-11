@@ -1,0 +1,10 @@
+config/local.json
+config/train-*.h
+hardware/train_controller/config.h
+web/data/
+node_modules/
+.pio/
+build/
+*.wav
+*.bin
+.DS_Store

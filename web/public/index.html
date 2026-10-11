@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>기억을 따라 · 열차 제어</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
+<body><main>
+<header><div><p class="eyebrow">MEMORY TRAINS / CONTROL ROOM</p><h1>기억을 따라</h1><p>풍경과 시선, 두 열차의 전시 제어</p></div><span id="connection" role="status">연결 대기</span></header>
+<section id="login"><h2>제어 화면 연결</h2><form id="login-form"><label>제어 키 <input id="key" type="password" required autocomplete="off"></label><button>연결</button></form></section>
+<div id="console" hidden>
+<nav aria-label="전시 조작"><button id="home">원점 복귀</button><button id="start" class="primary">전체 시작</button><button id="blackout">영상 암전</button><button id="stop" class="stop">전체 정지</button><button id="clear">오류 해제</button></nav>
+<p id="notice" aria-live="polite">두 열차를 원점으로 복귀한 후 시작하세요.</p>
+<section class="train-grid" id="trains"></section>
+<section><div class="section-head"><div><h2>전시 시퀀스</h2><p>수정한 값은 저장 후 다음 전체 시작부터 적용됩니다. 마지막 장면 후 자동 원점 복귀.</p></div><button id="add">장면 추가</button></div>
+<div class="options"><label><input id="repeat" type="checkbox"> 자동 반복</label><label>복귀 후 대기(시작 준비 약 4초 별도) <input id="wait" type="number" min="1" max="600" value="10"> 초</label><button id="save" class="primary">설정 저장</button><button id="reload">저장값 불러오기</button></div>
+<div id="stages"></div></section>
+<footer>v0.1 · 내부 Wi-Fi · 속도는 PWM 설정값이며 실제 이동속도는 아닙니다. 바퀴 센서 1개로 측정한 RPM은 방향을 구분하지 않습니다.</footer>
+</div></main></body></html>
