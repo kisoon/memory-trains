@@ -2,7 +2,7 @@
 
 두 ESP32-S3 열차의 이동, 필름 LED 투사, 5초 I2S 음원을 내부 Wi-Fi 웹페이지에서 제어하는 전시용 초기 개발 프로젝트입니다.
 
-> v0.1 개발 초안입니다. 실제 모터·LED·보드에서 검증하기 전 전시 운용용으로 간주하지 마세요.
+> v0.1 시제품입니다. 웹 테스트 11개와 ESP32-S3 컴파일을 통과했습니다. 실제 모터·LED·보드에서 검증하기 전 전시 운용용으로 간주하지 마세요.
 > 현재 확인된 사항/미검증 항목은 [검증 기록](docs/validation.md)을 읽어 주세요.
 
 ## 폴더
@@ -108,6 +108,6 @@ FFmpeg 예시:
 
 web 폴더에서 `npm test`.
 
-GitHub Actions는 저장소에 파일이 올라간 후 Node 테스트와 Arduino 펌웨어 컴파일을 실행합니다. 컴파일 성공만으로 배선·부하·지연시간이 검증되지는 않습니다.
+[GitHub Actions 검증](https://github.com/kisoon/memory-trains/actions/runs/38147656172): Node.js 테스트 11개 통과, Arduino ESP32-S3 컴파일 성공. 컴파일 성공만으로 배선·부하·지연시간이 검증되지는 않습니다.
 
 [부품과 배선](docs/hardware.md) · [통신 규약](docs/protocol.md) · [현장 시험](docs/commissioning.md) · [검증 기록](docs/validation.md)
